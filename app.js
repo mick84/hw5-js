@@ -120,8 +120,7 @@ const maskify = (seq) => {
 const shortestLength = (sentence) => Math.min(...sentence.split(" ").map((word) => word.length));
 //6.1
 const accum = (str) => {
-    var _a;
-    if (((_a = str.match(/[a-z]/gi)) === null || _a === void 0 ? void 0 : _a.length) !== str.length) {
+    if (str.match(/[a-z]/gi)?.length !== str.length) {
         throw new Error("Input has non-alphabetical characters");
     }
     return str
